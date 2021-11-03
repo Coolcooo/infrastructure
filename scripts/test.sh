@@ -16,5 +16,6 @@ if [ $? != 0 ]; then
     exit $?
 fi
 echo -e '\nЗапуск команды создания задачи на Трекере\n'
-chmod +x ./scripts/create-tracker-task.sh
-./scripts/create-tracker-task.sh
+
+chmod +x ./scripts/create-image.sh
+./scripts/create-image.sh
