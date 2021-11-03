@@ -28,6 +28,9 @@ CHANGE=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%
 echo "$CHANGE"
 echo "$CHANGE"
 echo "$CHANGE"
+echo "$CHANGE"
+echo "$CHANGE"
+echo "$CHANGE"
 
 #git log
 #git log
