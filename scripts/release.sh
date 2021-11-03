@@ -29,13 +29,13 @@ echo "$CHANGE"
 echo "$CHANGE"
 echo "$CHANGE"
 
-git log
-git log
-git log
-echo "$LOGS"
-echo "$LOGS"
-echo "$LOGS"
-echo "$LOGS"
+#git log
+#git log
+#git log
+#echo "$LOGS"
+#echo "$LOGS"
+#echo "$LOGS"
+#echo "$LOGS"
 LOGS="$INFO_ABOUT_RELEASE""$LOGS"
 export RESULT_TESTS=''
 
