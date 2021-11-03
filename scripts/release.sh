@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-pwd
-pwd
-pwd
-
+git fetch --tags
 
 PREVIOUS_RELEASE=$(git tag | grep v | tail -2 | head -1)
 export PREVIOUS_RELEASE
