@@ -25,6 +25,8 @@ export LOGS
 
 CHANGE=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n")
 
+echo "$LATEST_RELEASE"
+echo "$PREVIOUS_RELEASE"
 echo "$CHANGE"
 echo "$CHANGE"
 echo "$CHANGE"
