@@ -25,6 +25,9 @@ export LOGS
 
 CHANGE=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n")
 
+git tag | grep v | tail -2
+git tag | grep v | tail -2
+
 echo "$LATEST_RELEASE"
 echo "$PREVIOUS_RELEASE"
 echo "$CHANGE"
