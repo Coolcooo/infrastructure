@@ -4,11 +4,20 @@ pwd
 pwd
 pwd
 
-export PREVIOUS_RELEASE=$(git tag | grep v | tail -2 | head -1)
-export LATEST_RELEASE=$(git tag | grep v | tail -1)
+
+PREVIOUS_RELEASE=$(git tag | grep v | tail -2 | head -1)
+export PREVIOUS_RELEASE
+
+LATEST_RELEASE=$(git tag | grep v | tail -1)
+export LATEST_RELEASE
+
 export TRACKER_TOKEN=AQAAAAAG3PsyAAd5O_Vg1mWqJkL1p5xLOXBMe0w
 export ORG_ID=6461097
-export INFO_ABOUT_RELEASE=$(git log "${LATEST_RELEASE}" --pretty=format:"Версия релиза: ${LATEST_RELEASE}, Автор: %an, Дата релиза: %as \n" | head -1)
+
+
+INFO_ABOUT_RELEASE=$(git log "${LATEST_RELEASE}" --pretty=format:"Версия релиза: ${LATEST_RELEASE}, Автор: %an, Дата релиза: %as \n" | head -1)
+export INFO_ABOUT_RELEASE
+
 export UNIQUE='Coolcooo_'"${LATEST_RELEASE}"
 export HOST_URL='https://api.tracker.yandex.net'
 export LOGS=$(git log "${PREVIOUS_RELEASE}".."${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n" | grep feat: | tr -s '\n' ' ')
