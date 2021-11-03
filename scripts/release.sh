@@ -22,9 +22,11 @@ export UNIQUE='Coolcooo_'"${LATEST_RELEASE}"
 export HOST_URL='https://api.tracker.yandex.net'
 LOGS=$(git log "${PREVIOUS_RELEASE}".."${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n" | grep feat: | tr -s '\n' ' ')
 export LOGS
-echo LOGS
-echo LOGS
-echo LOGS
+
+echo "$LOGS"
+echo "$LOGS"
+echo "$LOGS"
+echo "$LOGS"
 LOGS="$INFO_ABOUT_RELEASE""$LOGS"
 export RESULT_TESTS=''
 
