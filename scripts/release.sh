@@ -11,7 +11,6 @@ export LATEST_RELEASE
 export TRACKER_TOKEN=AQAAAAAG3PsyAAd5O_Vg1mWqJkL1p5xLOXBMe0w
 export ORG_ID=6461097
 
-
 INFO_ABOUT_RELEASE=$(git log "${LATEST_RELEASE}" --pretty=format:"Версия релиза: ${LATEST_RELEASE}, Автор: %an, Дата релиза: %as \n" | head -1)
 export INFO_ABOUT_RELEASE
 
@@ -20,29 +19,6 @@ export HOST_URL='https://api.tracker.yandex.net'
 LOGS=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n" | grep feat: | tr -s '\n' ' ')
 export LOGS
 
-CHANGE=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n")
-
-git tag
-
-git tag | grep v | tail -2
-git tag | grep v | tail -2
-
-echo "$LATEST_RELEASE"
-echo "$PREVIOUS_RELEASE"
-echo "$CHANGE"
-echo "$CHANGE"
-echo "$CHANGE"
-echo "$CHANGE"
-echo "$CHANGE"
-echo "$CHANGE"
-
-#git log
-#git log
-#git log
-#echo "$LOGS"
-#echo "$LOGS"
-#echo "$LOGS"
-#echo "$LOGS"
 LOGS="$INFO_ABOUT_RELEASE""$LOGS"
 export RESULT_TESTS=''
 
