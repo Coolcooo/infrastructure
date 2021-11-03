@@ -23,7 +23,12 @@ export HOST_URL='https://api.tracker.yandex.net'
 LOGS=$(git log "${PREVIOUS_RELEASE}"'..'"${LATEST_RELEASE}" --pretty=format:"%h - %s (%an, %ar)\n\n" | grep feat: | tr -s '\n' ' ')
 export LOGS
 
-echo
+CHANGE=$(git log)
+
+echo "$CHANGE"
+echo "$CHANGE"
+echo "$CHANGE"
+
 git log
 git log
 git log
