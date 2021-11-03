@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-git fetch --tags
+git fetch --tags -f --unshallow -p
 
 PREVIOUS_RELEASE=$(git tag | grep v | tail -2 | head -1)
 export PREVIOUS_RELEASE
