@@ -6,6 +6,10 @@ DATA_FIELD='{
   "description": "'"${LOGS}"'",
   "unique": "'"${UNIQUE}"'"
 }'
+echo "LATEST_RELEASE${LATEST_RELEASE}";
+echo "LOGS ${LOGS}"
+echo "UNIQUE ${UNIQUE}"
+
 echo -e '\nОтправка запроса создания задачи\n'
 ANSWER=$(curl -X POST "${HOST_URL}"'/v2/issues/' \
      -H 'Authorization: OAuth '"${TRACKER_TOKEN}" \
